@@ -37,7 +37,7 @@ items:
     resources: {}
     source:
       git:
-        uri: -https://github.com/kjurassic/simpleapp.git
+        uri: https://github.com/kjurassic/simpleapp
       type: Git
     strategy:
       sourceStrategy:
@@ -48,10 +48,10 @@ items:
       type: Source
     triggers:
     - github:
-        secret: AEpwvONJdZ82vbb1YkK_
+        secret: kBH_4PwC0TmHrMB_lJY_
       type: GitHub
     - generic:
-        secret: _IdSARj-7SpUUZINnCcv
+        secret: evJH7wa5PS0gGHI1cxMk
       type: Generic
     - type: ConfigChange
     - imageChange: {}
@@ -88,9 +88,9 @@ items:
         - image: ' '
           name: simple
           ports:
-          - containerPort: 8080
-            protocol: TCP
           - containerPort: 8443
+            protocol: TCP
+          - containerPort: 8080
             protocol: TCP
           resources: {}
   status: {}
